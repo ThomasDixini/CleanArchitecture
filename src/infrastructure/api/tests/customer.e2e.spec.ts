@@ -1,7 +1,5 @@
 import request from 'supertest';
 import { app, sequelize } from '../express';
-import { number } from 'yup';
-import e from 'express';
 
 describe("E2E Test for Customer", () => {
 
