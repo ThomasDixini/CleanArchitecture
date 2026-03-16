@@ -17,6 +17,7 @@ export default class ProductYupValidator implements ValidatorInterface<Product>{
                 {
                     id: entity.id,
                     name: entity.name,
+                    price: entity.price,
                 },
                 {
                     abortEarly: false,
@@ -26,7 +27,7 @@ export default class ProductYupValidator implements ValidatorInterface<Product>{
             const e = errors as yup.ValidationError;
             e.errors.forEach((error) => {
                 entity.notification.addError({
-                    context: "customer",
+                    context: "product",
                     message: error,
                 });
             });
